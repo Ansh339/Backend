@@ -37,6 +37,24 @@ document.querySelector('#delete-btn').addEventListener('click', e => {
 
                 document.querySelector('#delete-disp').innerHTML = output
             }
+            else if(xhr.readyState === 4 && xhr.status === 400)
+            {
+                const response = JSON.parse(xhr.responseText)
+                console.log(response)
+
+                let output = `<p>${response.message}`
+
+                document.querySelector('#delete-disp').innerHTML = output
+            }
+            else if(xhr.readyState === 4 && xhr.status === 401)
+            {
+                const response = JSON.parse(xhr.responseText)
+                console.log(response)
+
+                let output = `<p>${response.message}`
+
+                document.querySelector('#delete-disp').innerHTML = output
+            }
         }
         xhr.send(JSON.stringify(User));
     }

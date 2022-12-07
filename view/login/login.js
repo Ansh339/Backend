@@ -34,6 +34,24 @@ document.querySelector('#login-btn').addEventListener('click', e => {
 
                 document.querySelector('#login-disp').innerHTML = output
             }
+            else if(xhr.readyState === 4 && xhr.status === 400) {
+                console.log(JSON.parse(xhr.responseText));
+                const response = JSON.parse(xhr.responseText)
+                let output = `
+                <p>${response.message}
+                `
+
+                document.querySelector('#login-disp').innerHTML = output
+            }
+            else if(xhr.readyState === 4 && xhr.status === 401) {
+                console.log(JSON.parse(xhr.responseText));
+                const response = JSON.parse(xhr.responseText)
+                let output = `
+                <p>${response.message}
+                `
+
+                document.querySelector('#login-disp').innerHTML = output
+            }
         }
     
         xhr.send(JSON.stringify(User))

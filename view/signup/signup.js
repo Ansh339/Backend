@@ -34,6 +34,13 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
 
                 document.querySelector('#signup-disp').innerHTML = output
             }
+            else if(xhr.status === 400 && xhr.readyState === 4)
+            {
+                const response = JSON.parse(xhr.responseText);
+                let output = `<p>${response.message}`
+
+                document.querySelector('#signup-disp').innerHTML = output
+            }
         }
     
         xhr.send(JSON.stringify(User))

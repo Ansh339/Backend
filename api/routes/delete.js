@@ -23,7 +23,7 @@ router.delete('/', (req, res) => {
                 }
                 else
                 {
-                    res.status(400).json({message: 'Authentication Failed'})
+                    res.status(401).json({message: 'Authentication Failed'})
                 }
             }
         })

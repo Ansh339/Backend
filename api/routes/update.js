@@ -19,7 +19,7 @@ router.patch('/', (req, res) => {
                 if(result[0].password === userOldPassword)
                 {
                     if(userNewPassword === userOldPassword)
-                    {res.status(400).json({message: 'Enter a New Password to Update'})}
+                    {res.status(401).json({message: 'Enter a New Password to Update'})}
                     else
                     {
                         updatedUser = {
@@ -35,7 +35,7 @@ router.patch('/', (req, res) => {
                 }
                 else
                 {
-                    res.status(400).json({message: 'Authentication Failed'})
+                    res.status(402).json({message: 'Authentication Failed'})
                 }
             }
         })
