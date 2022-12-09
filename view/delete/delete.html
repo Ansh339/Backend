@@ -4,31 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap.min.css">
     <title>Accounts</title>
 </head>
 <body>
     <!-- NAVBAR -->
-    <div>
-        <nav>
-            <a href="../signup/signup.html">SIGNUP</a>
-            <a href="../login/login.html">LOGIN</a>
-            <a href="../update/update.html">UPDATE</a>
-            <a href="../delete/delete.html">DELETE</a>
-        </nav>
-    </div>
-    <h1>DELETE PAGE</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                <a class="nav-link active" href="../signup/signup.html">SIGNUP
+                    <span class="visually-hidden">(current)</span>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="../login/login.html">LOGIN
+                    <span class="visually-hidden">(current)</span>
+                </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="../update/update.html">UPDATE</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="../delete/delete.html">DELETE</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 style="text-align: center; font-size: 4em;">DELETE PAGE</h1>
     <!-- DELETE USER -->
-    <div>
+    <div class="container">
         <form action="">
-            <div>
-                <input id="delete-email" type="text" placeholder="Enter Email">
-            </div>
-            <div>
-                <input id="delete-password" type="text" placeholder="Enter Password">
-            </div>
-            <div>
-                <input id="delete-btn" type="submit" class="btn btn-success" value="DELETE USER">
-            </div>
+            <fieldset>
+                <div class="form-group">
+                    <label class="form-label mt-4">Email address</label>
+                    <input class="form-control" id="delete-email" type="email" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label mt-4">Password</label>
+                    <input class="form-control" id="delete-password" type="password" placeholder="Enter Password">
+                </div>
+            </fieldset>
+            <br>
+                <div>
+                    <button id="delete-btn" type="submit" class="btn btn-primary">DELETE</button>
+                </div>
         </form>
     </div>
     <br>
