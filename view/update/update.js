@@ -31,7 +31,9 @@ document.querySelector('#update-btn').addEventListener('click', e => {
                 console.log(JSON.parse(xhr.responseText));
                 const response = JSON.parse(xhr.responseText)
                 let output = `
-                <p>Account details with Email <b>${response.update.email}</b> has been Successfully Updated</p>
+                <div class="alert alert-dismissable alert-success">
+                    <h2>Account details with Email "${response.update.email}" has been Successfully Updated</h2>
+                </div>
                 `
 
                 document.querySelector('#update-disp').innerHTML = output
@@ -39,21 +41,33 @@ document.querySelector('#update-btn').addEventListener('click', e => {
             else if(xhr.readyState === 4 && xhr.status === 400) {
                 console.log(JSON.parse(xhr.responseText));
                 const response = JSON.parse(xhr.responseText)
-                let output = `<p>${response.message}`
+                let output = `
+                <div class="alert alert-dismissable alert-danger">
+                    <h2>${response.message}
+                </div>    
+                `
 
                 document.querySelector('#update-disp').innerHTML = output
             }
             else if(xhr.readyState === 4 && xhr.status === 401) {
                 console.log(JSON.parse(xhr.responseText));
                 const response = JSON.parse(xhr.responseText)
-                let output = `<p>${response.message}`
+                let output = `
+                <div class="alert alert-dismissable alert-warning">
+                    <h2>${response.message}
+                </div>    
+                `
 
                 document.querySelector('#update-disp').innerHTML = output
             }
             else if(xhr.readyState === 4 && xhr.status === 402) {
                 console.log(JSON.parse(xhr.responseText));
                 const response = JSON.parse(xhr.responseText)
-                let output = `<p>${response.message}`
+                let output = `
+                <div class="alert alert-dismissable alert-warning">
+                    <h2>${response.message}
+                </div>    
+                `
 
                 document.querySelector('#update-disp').innerHTML = output
             }

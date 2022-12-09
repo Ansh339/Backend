@@ -28,8 +28,10 @@ document.querySelector('#login-btn').addEventListener('click', e => {
             if(xhr.readyState === 4 && xhr.status === 200) {
                 console.log(JSON.parse(xhr.responseText));
                 let output = `
-                <p>Account with Email <b>${email}</b> has been Successfully LOGGED IN</p>
-                <p>WELCOME</p>
+                <div class="alert alert-dismissible alert-success">
+                    <h2>Account with Email "${email}" has been Successfully LOGGED IN</h2>
+                    <h2>WELCOME</h2>
+                </div>
                 `
 
                 document.querySelector('#login-disp').innerHTML = output
@@ -38,7 +40,9 @@ document.querySelector('#login-btn').addEventListener('click', e => {
                 console.log(JSON.parse(xhr.responseText));
                 const response = JSON.parse(xhr.responseText)
                 let output = `
-                <p>${response.message}
+                <div class="alert alert-dismissible alert-danger">
+                    <h2>${response.message}
+                </div>
                 `
 
                 document.querySelector('#login-disp').innerHTML = output
@@ -47,7 +51,9 @@ document.querySelector('#login-btn').addEventListener('click', e => {
                 console.log(JSON.parse(xhr.responseText));
                 const response = JSON.parse(xhr.responseText)
                 let output = `
-                <p>${response.message}
+                <div class="alert alert-dismissible alert-warning">
+                    <h2>${response.message}
+                </div>    
                 `
 
                 document.querySelector('#login-disp').innerHTML = output

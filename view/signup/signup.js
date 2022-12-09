@@ -29,7 +29,9 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
                 console.log(JSON.parse(xhr.responseText));
                 const response = JSON.parse(xhr.responseText);
                 let output = `
-                <p>Account with email ${response.userDetails.email} has been REGISTERED
+                <div class="alert alert-dismissable alert-success">
+                    <h2>Account with email "${response.userDetails.email}" has been REGISTERED
+                </div>
                 `
 
                 document.querySelector('#signup-disp').innerHTML = output
@@ -37,7 +39,11 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
             else if(xhr.status === 400 && xhr.readyState === 4)
             {
                 const response = JSON.parse(xhr.responseText);
-                let output = `<p>${response.message}`
+                let output = `
+                <div class="alert alert-dismissable alert-warning">
+                    <h2>${response.message}
+                </div>
+                `
 
                 document.querySelector('#signup-disp').innerHTML = output
             }

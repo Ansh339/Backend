@@ -32,7 +32,9 @@ document.querySelector('#delete-btn').addEventListener('click', e => {
                 console.log(response)
 
                 let output = `
-                <p>User with Email ${email} has been Deleted
+                <div class="alert alert-dismissable alert-success">
+                    <h2>User with Email "${email}" has been Deleted
+                </div>
                 `
 
                 document.querySelector('#delete-disp').innerHTML = output
@@ -42,7 +44,11 @@ document.querySelector('#delete-btn').addEventListener('click', e => {
                 const response = JSON.parse(xhr.responseText)
                 console.log(response)
 
-                let output = `<p>${response.message}`
+                let output = `
+                <div class="alert alert-dismissable alert-danger">
+                    <h2>${response.message}
+                </div>    
+                `
 
                 document.querySelector('#delete-disp').innerHTML = output
             }
@@ -51,7 +57,11 @@ document.querySelector('#delete-btn').addEventListener('click', e => {
                 const response = JSON.parse(xhr.responseText)
                 console.log(response)
 
-                let output = `<p>${response.message}`
+                let output = `
+                <div class="alert alert-dismissable alert-warning">
+                    <h2>${response.message}
+                </div>    
+                `
 
                 document.querySelector('#delete-disp').innerHTML = output
             }
