@@ -6,7 +6,7 @@ document.querySelector('#update-btn').addEventListener('click', e => {
     const oldPassword = document.querySelector('#update-o-password').value
     const newPassword = document.querySelector('#update-n-password').value
 
-    if(email === '' || oldPassword === '' || newPassword === '')
+    if(email === '' || oldPassword === '')
     {
         alert('Email and Password fields are Mandatory')
     }
@@ -32,7 +32,14 @@ document.querySelector('#update-btn').addEventListener('click', e => {
                 const response = JSON.parse(xhr.responseText)
                 let output = `
                 <div class="alert alert-dismissable alert-success">
-                    <h2>Account details with Email "${response.update.email}" has been Successfully Updated</h2>
+                    <h2>Account details with Name "${response.update.name}" has been Successfully Updated</h2>
+                    <div class="card text-white bg-success mb-3" style ="margin: 1.2em; width:250px">
+                        <div class="card-body">
+                            <p>NAME = ${response.update.name}</p>
+                            <p>NUMBER = ${response.update.number}</p>
+                            <p>EMAIL = ${response.update.email}</p>
+                        </div>
+                    </div>
                 </div>
                 `
 

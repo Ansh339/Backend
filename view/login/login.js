@@ -27,10 +27,18 @@ document.querySelector('#login-btn').addEventListener('click', e => {
         xhr.onreadystatechange = () => {
             if(xhr.readyState === 4 && xhr.status === 200) {
                 console.log(JSON.parse(xhr.responseText));
+                const response = JSON.parse(xhr.responseText);
                 let output = `
                 <div class="alert alert-dismissible alert-success">
-                    <h2>Account with Email "${email}" has been Successfully LOGGED IN</h2>
-                    <h2>WELCOME</h2>
+                    <h2 style="text-align:center">Account with Name "${response.result[0].name}" has been Successfully LOGGED IN</h2>
+                    <h2 style="text-align:center">WELCOME</h2>
+                    <div class="card text-white bg-success mb-3" style ="margin: 1.2em; width:250px">
+                        <div class="card-body">
+                            <p>NAME = ${response.result[0].name}</p>
+                            <p>NUMBER = ${response.result[0].number}</p>
+                            <p>EMAIL = ${response.result[0].email}</p>
+                        </div>
+                    </div>
                 </div>
                 `
 

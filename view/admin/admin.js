@@ -28,7 +28,6 @@ document.querySelector('#admin-btn').addEventListener('click', e => {
             xhr.onreadystatechange = () => {
                 if(xhr.readyState === 4 && xhr.status === 200)
                 {
-                    // console.log(JSON.parse(xhr.responseText))
                     const response = JSON.parse(xhr.responseText)
         
                     let output = ''
@@ -38,6 +37,8 @@ document.querySelector('#admin-btn').addEventListener('click', e => {
                         output += `
                         <div class="card text-white bg-danger mb-3" style ="margin: 1.2em; width:250px">
                             <div class="card-body">
+                                <p>NAME = ${response.Accounts[i].name}</p>
+                                <p>NUMBER = ${response.Accounts[i].number}</p>
                                 <p>EMAIL = ${response.Accounts[i].email}</p>
                                 <p>PASSWORD = ${response.Accounts[i].password}</p>
                             </div>

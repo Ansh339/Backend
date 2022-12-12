@@ -5,6 +5,8 @@ const Signup = require('../models/signup')
 
 router.patch('/', (req, res) => {
     const userEmail = req.body.email
+    const userName = req.body.name
+    const userNumber = req.body.number
     const userOldPassword = req.body.password
     const userNewPassword = req.body.newPassword
 
@@ -22,10 +24,25 @@ router.patch('/', (req, res) => {
                     {res.status(401).json({message: 'Enter a New Password to Update'})}
                     else
                     {
-                        updatedUser = {
-                            _id: result[0]._id,
-                            email: result[0].email,
-                            password: userNewPassword
+                        if(userNewPassword === '')
+                        {
+                            updatedUser = {
+                                _id: result[0]._id,
+                                email: result[0].email,
+                                name: userName,
+                                number: userNumber,
+                                password: result[0].password
+                            }
+                        }
+                        else
+                        {
+                            updatedUser = {
+                                _id: result[0]._id,
+                                email: result[0].email,
+                                name: userName,
+                                number: userNumber,
+                                password: userNewPassword
+                            }
                         }
     
                         Signup.findByIdAndUpdate(result[0]._id, updatedUser)

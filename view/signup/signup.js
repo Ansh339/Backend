@@ -2,6 +2,8 @@
 document.querySelector('#signup-btn').addEventListener('click', e => {
     e.preventDefault()
 
+    const name = document.querySelector('#signup-name').value
+    const number = document.querySelector('#signup-number').value
     const email = document.querySelector('#signup-email').value
     const password = document.querySelector('#signup-password').value
 
@@ -12,6 +14,8 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
     else
     {
         const User = {
+            name: name,
+            number: number,
             email: email,
             password: password
         }
@@ -30,7 +34,7 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
                 const response = JSON.parse(xhr.responseText);
                 let output = `
                 <div class="alert alert-dismissable alert-success">
-                    <h2>Account with email "${response.userDetails.email}" has been REGISTERED
+                    <h2>Account with name "${response.userDetails.name}" has been REGISTERED
                 </div>
                 `
 

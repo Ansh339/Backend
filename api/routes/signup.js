@@ -10,9 +10,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    // Expecting email and password from the user to write in the DB
     const user = new Signup({
         _id: new mongoose.Types.ObjectId,
+        name: req.body.name,
+        number: req.body.number,
         email: req.body.email,
         password: req.body.password
     })
