@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
         else
         {
             if(result[0].password === userPassword)
-            {res.status(200).json({message: "You have Successfully Logged In"})}
+            {res.status(200).json({message: "You have Successfully Logged In", result: result})}
             else
             {res.status(400).json({message: "Email or Password is Wrong"})}
         }

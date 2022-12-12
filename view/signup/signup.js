@@ -34,7 +34,7 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
                 const response = JSON.parse(xhr.responseText);
                 let output = `
                 <div class="alert alert-dismissable alert-success">
-                    <h2>Account with name "${response.userDetails.name}" has been REGISTERED
+                    <h2>Account with Email "${response.userDetails.email}" has been REGISTERED
                 </div>
                 `
 
