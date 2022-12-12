@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <title>Accounts</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 4em;">ADMIN DATA</h1>
+
+    <div class="container">
+        <form action="">
+            <fieldset>
+                <div class="form-group">
+                    <label class="form-label mt-4">Email address</label>
+                    <input class="form-control" id="admin-email" type="email" placeholder="Enter Admin Email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label mt-4">Password</label>
+                    <input class="form-control" id="admin-password" type="password" placeholder="Enter Admin Password">
+                </div>
+            </fieldset>
+            <br>
+                <div>
+                    <button id="admin-btn" type="submit" class="btn btn-primary">LOGIN</button>
+                    <a class="btn btn-primary" href="../index.html">HOME</a>
+                </div>
+        </form>
+    </div>
+    <br>
+    <br>
+    
+    <div id="admin-disp" style="display: flex; flex-wrap: wrap"></div>
+
+    <script src="./admin.js"></script>
+</body>
+</html>
