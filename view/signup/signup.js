@@ -39,6 +39,7 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#signup-disp').innerHTML = output
+                document.querySelector('#signup-disp').scrollIntoView({behavior: 'smooth'})
             }
             else if(xhr.status === 400 && xhr.readyState === 4)
             {
@@ -50,6 +51,7 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#signup-disp').innerHTML = output
+                document.querySelector('#signup-disp').scrollIntoView({behavior: 'smooth'})
             }
         }
     

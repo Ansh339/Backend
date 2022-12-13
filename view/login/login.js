@@ -43,6 +43,7 @@ document.querySelector('#login-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#login-disp').innerHTML = output
+                document.querySelector('#login-disp').scrollIntoView({behavior: 'smooth'})
             }
             else if(xhr.readyState === 4 && xhr.status === 400) {
                 console.log(JSON.parse(xhr.responseText));
@@ -54,6 +55,7 @@ document.querySelector('#login-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#login-disp').innerHTML = output
+                document.querySelector('#login-disp').scrollIntoView({behavior: 'smooth'})
             }
             else if(xhr.readyState === 4 && xhr.status === 401) {
                 console.log(JSON.parse(xhr.responseText));
@@ -65,6 +67,7 @@ document.querySelector('#login-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#login-disp').innerHTML = output
+                document.querySelector('#login-disp').scrollIntoView({behavior: 'smooth'})
             }
         }
     

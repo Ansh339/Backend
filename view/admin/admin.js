@@ -46,6 +46,7 @@ document.querySelector('#admin-btn').addEventListener('click', e => {
                         `
                     }
                     document.querySelector('#admin-disp').innerHTML = output
+                    document.querySelector('#admin-disp').scrollIntoView({behavior: 'smooth'})
                 }
             }
         

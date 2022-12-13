@@ -48,6 +48,7 @@ document.querySelector('#update-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#update-disp').innerHTML = output
+                document.querySelector('#update-disp').scrollIntoView({behavior: 'smooth'})
             }
             else if(xhr.readyState === 4 && xhr.status === 400) {
                 console.log(JSON.parse(xhr.responseText));
@@ -59,6 +60,7 @@ document.querySelector('#update-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#update-disp').innerHTML = output
+                document.querySelector('#update-disp').scrollIntoView({behavior: 'smooth'})
             }
             else if(xhr.readyState === 4 && xhr.status === 401) {
                 console.log(JSON.parse(xhr.responseText));
@@ -70,6 +72,7 @@ document.querySelector('#update-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#update-disp').innerHTML = output
+                document.querySelector('#update-disp').scrollIntoView({behavior: 'smooth'})
             }
             else if(xhr.readyState === 4 && xhr.status === 402) {
                 console.log(JSON.parse(xhr.responseText));
@@ -81,6 +84,7 @@ document.querySelector('#update-btn').addEventListener('click', e => {
                 `
 
                 document.querySelector('#update-disp').innerHTML = output
+                document.querySelector('#update-disp').scrollIntoView({behavior: 'smooth'})
             }
         }
     
