@@ -13,11 +13,13 @@ mongoose.connect(`mongodb+srv://Ansh339:Ansh2002@cluster0.9j2diyw.mongodb.net/Us
 app.use(bodyParser.urlencoded( {extended:false} ))
 app.use(bodyParser.json())
 
+const homeRoutes = require('./api/routes/home')
 const signupRoutes = require('./api/routes/signup')
 const loginRoutes = require('./api/routes/login')
 const updateRoutes = require('./api/routes/update')
 const deleteRoutes = require('./api/routes/delete')
 
+app.use('/', homeRoutes)
 app.use('/users/signup', signupRoutes)
 app.use('/users/login', loginRoutes)
 app.use('/users/update', updateRoutes)
