@@ -18,7 +18,7 @@ document.querySelector('#admin-btn').addEventListener('click', e => {
         {
             // console.log('SIGN IN SUCCESSFUL');
             const xhr = new XMLHttpRequest()
-            const url = 'http://localhost:5000/users/signup'
+            const url = 'http://formnodejs-env.eba-hubv8pmi.us-east-2.elasticbeanstalk.com/users/signup'
         
             xhr.open('GET', url)
         

@@ -17,7 +17,7 @@ document.querySelector('#delete-btn').addEventListener('click', e => {
         }
 
         const xhr = new XMLHttpRequest()
-        const url = `http://localhost:5000/users/delete`
+        const url = `http://formnodejs-env.eba-hubv8pmi.us-east-2.elasticbeanstalk.com/users/delete`
 
         xhr.open('DELETE', url)
 
