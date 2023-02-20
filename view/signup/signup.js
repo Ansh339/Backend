@@ -21,7 +21,7 @@ document.querySelector('#signup-btn').addEventListener('click', e => {
         }
 
         const xhr = new XMLHttpRequest()
-        const url = 'http://formnodejs-env.eba-hubv8pmi.us-east-2.elasticbeanstalk.com/users/signup'
+        const url = 'http://localhost:5000/users/signup'
     
         xhr.open('POST', url)
     

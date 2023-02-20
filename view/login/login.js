@@ -17,7 +17,7 @@ document.querySelector('#login-btn').addEventListener('click', e => {
         }
 
         const xhr = new XMLHttpRequest()
-        const url = 'http://formnodejs-env.eba-hubv8pmi.us-east-2.elasticbeanstalk.com/users/login'
+        const url = 'http://localhost:5000/users/login'
     
         xhr.open('POST', url)
     
